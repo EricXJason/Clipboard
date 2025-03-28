@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Bai Jamjuree", "sans-serif";
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+  --color-chocolate: #2596be;
+  --color-strongCyan: hsl(171, 66%, 44%);
+  --color-lightBlue: hsl(233, 100%, 69%);
+  --color-darkGrayishBlue: hsl(210, 10%, 33%);
+  --color-grayishBlue: hsl(201, 11%, 66%);
+}
+
+@layer base {
+  h3 {
+    @apply text-4xl md:text-5xl font-bold text-darkGrayishBlue mb-8;
+  }
+
+  h5 {
+    @apply mb-2 text-2xl font-bold text-darkGrayishBlue md:text-3xl;
+  }
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.section-content {
+  @apply max-w-3xl mx-auto leading-9 text-xl text-center text-grayishBlue;
+}
+
+.button-container {
+  @apply flex flex-col mx-auto justify-center w-8/12 space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-8 md:w-full;
+}
+
+body {
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./images/bg-header-mobile.png");
+    background-position-x: center;
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(90%);
+}
